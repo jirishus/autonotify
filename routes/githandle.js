@@ -5,7 +5,7 @@ router.post('/', function(req, res, next) {
 
 
   console.log('github request');
-  console.log(req);
+  console.log(req.body);
 
   res.send('do git autoupdate');
 
