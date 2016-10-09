@@ -8,7 +8,7 @@ router.post('/', function(req, res, next) {
     console.log('current dir',data);
   });
 
-  cmd.run('cd /usr/share/nginx/html && git pull origin master');
+  cmd.run('cd /usr/share/nginx/html && sudo git pull origin master');
 
   res.send('do git autoupdate');
 
