@@ -8,6 +8,10 @@ router.post('/', function(req, res, next) {
     console.log('current dir',data);
   });
 
+  cmd.get('ll', function(data) {
+    console.log('some inf', data);
+  });
+
   // cmd.run('cd /usr/share/nginx/html && sudo git pull origin master');
   cmd.run('cd /usr/share/nginx/html && sudo git pull origin master', function(data) {
     console.log(data);
