@@ -9,7 +9,7 @@ router.post('/', function(req, res, next) {
   });
 
   cmd.get(
-        'ls',
+        'll',
         function(data){
             console.log('the current dir contains these files :\n\n',data)
         }
@@ -19,8 +19,6 @@ router.post('/', function(req, res, next) {
   cmd.run('cd /usr/share/nginx/html && sudo git pull origin master', function(data) {
     console.log('echo' + data);
   });
-
-  res.send('do git autoupdate');
 
 });
 
