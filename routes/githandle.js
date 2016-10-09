@@ -8,6 +8,13 @@ router.post('/', function(req, res, next) {
     console.log('current dir',data);
   });
 
+  cmd.get(
+        'ls',
+        function(data){
+            console.log('the current dir contains these files :\n\n',data)
+        }
+    );
+
   // cmd.run('cd /usr/share/nginx/html && sudo git pull origin master');
   cmd.run('cd /usr/share/nginx/html && sudo git pull origin master', function(data) {
     console.log('echo' + data);
