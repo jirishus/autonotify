@@ -12,6 +12,7 @@ router.post('/', function(req, res, next) {
         'll',
         function(data){
             console.log('the current dir contains these files :\n\n',data)
+            process.stdout.write(data);
         }
     );
 
